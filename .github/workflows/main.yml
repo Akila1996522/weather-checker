@@ -52,7 +52,7 @@ jobs:
 
   test:
     runs-on: ubuntu-22.04
-    needs: golangci-lint
+    needs: lint
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
