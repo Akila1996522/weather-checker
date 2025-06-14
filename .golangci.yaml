@@ -27,7 +27,6 @@ linters:
     - maligned
     - ifshort
     - nosnakecase
-    - structcheck
     - tenv
     - exhaustivestruct
 
