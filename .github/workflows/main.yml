@@ -65,8 +65,7 @@ jobs:
       - run: pytest test/ --junitxml=junit/test-results.xml --cov=weather --cov-report=xml --cov-report=html
 
       
-  
-  build & push:
+  build_push:
     runs-on: ubuntu-22.04
     needs: test
     steps:
@@ -89,7 +88,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-22.04
-    needs: build & push
+    needs: build_push
     steps:
       - uses: actions/checkout@v4
       - name: Add SSH host key
